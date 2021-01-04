@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Cv;
-use Illuminate\Http\UploadedFile;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\http\UploadedFile;
 
 
 class Cvcontroller extends Controller
@@ -31,7 +31,12 @@ class Cvcontroller extends Controller
         $cv= new Cv();
         $cv->titre = $request->input('titre');
         $cv->presantation = $request->input('presantation');
+         
 
+        if ($request->hasFile('photo')) {
+            $cv->photo->$request->photo->store('image');
+
+        }
 
          $request->validate([
                 'titre' => 'required',

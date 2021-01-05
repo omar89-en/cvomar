@@ -4,13 +4,13 @@
 
 
 
-
-<div class="jumbotron" >
- 
-  <h1 align="center">Les liste</h1>
+<h1  >Liste des cv</h1>
   <div  class="float-sm-right" >
     <a href="{{url('create')}}" class="btn btn-success">Nv cv</a>
   </div>
+<div class="jumbotron" >
+ 
+  
   
 <table class="table table-borderless">
 
@@ -51,3 +51,6 @@
 </div>
 
 @endsection
+
+
+
